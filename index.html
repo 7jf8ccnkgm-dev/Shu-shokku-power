@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>就活戦闘力診断</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>⚔️ 就活戦闘力診断 ⚔️</h1>
+
+    <p>
+        ※あくまでエンターテインメントです。
+    </p>
+
+    <label>学歴</label>
+
+    <select id="gakureki">
+        <option value="5">普通</option>
+        <option value="15">MARCH・関関同立以上</option>
+        <option value="25">旧帝大・早慶以上</option>
+    </select>
+
+    <label>TOEIC</label>
+
+    <input
+        id="toeic"
+        type="number"
+        value="600"
+    >
+
+    <label>ガクチカ強度（1〜10）</label>
+
+    <input
+        id="gakuchika"
+        type="range"
+        min="1"
+        max="10"
+        value="5"
+    >
+
+    <label>リーダー経験</label>
+
+    <select id="leader">
+        <option value="0">なし</option>
+        <option value="15">あり</option>
+    </select>
+
+    <label>志望企業</label>
+
+    <select id="company">
+
+        <option value="google">Google</option>
+        <option value="nintendo">任天堂</option>
+        <option value="recruit">リクルート</option>
+        <option value="cyber">サイバーエージェント</option>
+        <option value="mercari">メルカリ</option>
+        <option value="toyota">トヨタ</option>
+
+    </select>
+
+    <button onclick="diagnose()">
+        診断する
+    </button>
+    
+    <canvas id="radarChart"></canvas>
+    
+    <div id="result">
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
